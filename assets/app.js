@@ -6,7 +6,7 @@ const state = {
 };
 
 const $ = (id) => document.getElementById(id);
-
+console.log("app.js loaded");
 function normalize(str) {
   return (str || "")
     .toString()
