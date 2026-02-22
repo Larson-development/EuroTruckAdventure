@@ -1,46 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <title>Euro Truck Simulator 2 – Klips</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .clip {
-      background: #020617;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ETS2 Klips</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🚛</div>
+      <div>
+        <h1>Euro Truck Simulator 2 – Klips</h1>
+        <p class="subtitle">OneDrive-hostede videoer • tags • søgning</p>
+      </div>
+    </div>
 
-<h1>🚛 Euro Truck Simulator 2 – Klips</h1>
-<p>Samling af mine ETS2 klips (hostet på OneDrive)</p>
+    <div class="controls">
+      <input id="search" class="search" type="text" placeholder="Søg i titel, tags, noter…" />
+      <select id="sort" class="select">
+        <option value="date_desc">Nyeste først</option>
+        <option value="date_asc">Ældste først</option>
+        <option value="title_asc">Titel A→Z</option>
+        <option value="title_desc">Titel Z→A</option>
+      </select>
+      <button id="clear" class="btn">Nulstil</button>
+    </div>
 
-<div class="clip">
-  <h3>🛣️ Lang natkørsel i Norge</h3>
-  <a href="https://1drv.ms/v/XXXX" target="_blank">Se video</a>
-</div>
+    <div id="tagbar" class="tagbar"></div>
+  </header>
 
-<div class="clip">
-  <h3>🌧️ Regnvejr og tung last</h3>
-  <a href="https://1drv.ms/v/YYYY" target="_blank">Se video</a>
-</div>
+  <main class="container">
+    <div id="stats" class="stats"></div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty hidden">
+      <h2>Ingen klips matcher din søgning/filtre.</h2>
+      <p>Prøv at rydde søgning eller fjerne tags.</p>
+    </div>
+  </main>
 
+  <footer class="footer">
+    <span>Bygget med GitHub Pages • Data i <code>clips.json</code></span>
+  </footer>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
+``
